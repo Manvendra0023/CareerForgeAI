@@ -48,17 +48,18 @@ Requirements:
       contents: prompt,
     });
 
-    // Extract text from all parts (thinking models split into multiple parts)
-    const parts = response?.candidates?.[0]?.content?.parts || [];
-    const rawText =
-      parts.map((p) => p.text || "").join("") ||
-      response?.text ||
-      "";
+    console.log("=== RAW GEMINI RESPONSE ===");
+    console.dir(response, { depth: 10 });
+    console.log("=== END RAW GEMINI RESPONSE ===");
 
-    if (!rawText) throw new Error("Gemini returned no text output");
+    // Correct extraction (same logic used in your working insight generator)
+    const text =
+      response?.candidates?.[0]?.content?.parts?.[0]?.text ||
+      response?.output_text;
 
-    // Remove any markdown code fences if present
-    const content = rawText.replace(/```markdown\n?|```\n?/g, "").trim();
+    if (!text) throw new Error("Gemini returned no text output");
+
+    const content = text.trim();
 
     const coverLetter = await db.coverLetter.create({
       data: {
