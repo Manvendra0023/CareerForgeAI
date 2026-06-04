@@ -13,7 +13,7 @@
 
 **CareerForgeAI** is a full-stack SaaS platform that combines **AI-powered career tools** with a built-in **Cybersecurity Hub** — helping job seekers build resumes, ace interviews, generate cover letters, and **stay protected** from phishing, scams, and data breaches.
 
-[🌐 Live Demo](#) · [🐛 Report Bug](https://github.com/Manvendra0023/CareerForgeAI/issues) · [✨ Request Feature](https://github.com/Manvendra0023/CareerForgeAI/issues)
+[🌐 Live Demo](https://career-forge-ai-blond.vercel.app) · [🐛 Report Bug](https://github.com/Manvendra0023/CareerForgeAI/issues) · [✨ Request Feature](https://github.com/Manvendra0023/CareerForgeAI/issues)
 
 </div>
 
